@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StyleHub - Contact Us</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <style>
+      .hero-section {
+        background-image: url("/images/13.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .contact-info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .contact-info-item i {
+        font-size: 24px;
+        margin-right: 15px;
+        color: #007bff;
+      }
+      .navbar-nav .nav-link {
+        position: relative;
+        padding: 0.5rem 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background-color: #007bff;
+        transition: all 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover::after {
+        width: 100%;
+        left: 0;
+      }
+
+      .navbar-nav .nav-link.active::after {
+        width: 100%;
+        left: 0;
+      }
+
+      .dropdown-menu {
+        border: none;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+
+      .dropdown-item {
+        transition: background-color 0.3s ease;
+      }
+
+      .dropdown-item:hover {
+        background-color: #f8f9fa;
+      }
+
+      /* Adjust body padding for fixed navbar */
+      body {
+        padding-top: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="/images/logo.png"
+            alt="StyleHub Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-top me-2"
+          />
+          StyleHub
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Products
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="mens-clothing.html"
+                    >Men's Clothing</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="womens-clothing.html"
+                    >Women's Clothing</a
+                  >
+                </li>
+                <!-- <li>
+                    <a class="dropdown-item" href="accessories.html"
+                      >Accessories</a
+                    >
+                  </li> -->
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero-section">
+      <div class="text-center">
+        <h1 class="display-4">Contact Us</h1>
+        <p class="lead">We'd love to hear from you!</p>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Get in Touch</h2>
+          <p>
+            Have questions about our products or services? Want to collaborate?
+            We're here to help!
+          </p>
+          <div class="contact-info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h5>Address</h5>
+              <p>123 Fashion Street, San Francisco, CA 94105</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h5>Phone</h5>
+              <p>(555) 123-4567</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h5>Email</h5>
+              <p>info@stylehub.com</p>
+            </div>
+          </div>
+          <div class="mt-4">
+            <h4>Follow Us</h4>
+            <a href="#" class="btn btn-outline-primary me-2"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="btn btn-outline-primary me-2"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="btn btn-outline-primary me-2"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="btn btn-outline-primary"
+              ><i class="fab fa-pinterest"></i
+            ></a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Send Us a Message</h2>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject" required />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Our Store and Products</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img
+              src="/images/14.jpeg"
+              class="card-img-top"
+              alt="StyleHub store front"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Our Store</h5>
+              <p class="card-text">
+                Visit our flagship store in the heart of San Francisco.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img
+              src="/images/15.webp"
+              class="card-img-top"
+              alt="StyleHub team"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Our Team</h5>
+              <p class="card-text">
+                Meet our dedicated fashion experts ready to assist you.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img
+              src="/images/16.jpg"
+              class="card-img-top"
+              alt="StyleHub products"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Our Products</h5>
+              <p class="card-text">
+                Explore our latest collection of trendy fashion items.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light py-5 mt-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Visit Our Store</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.6545265443547!2d121.08082193357184!3d14.561738073256342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7d6fe9c6fd3%3A0xe80f9dd4d3160a2e!2s0516%20Victoriano%20Baltazar%2C%20Pasig%2C%201600%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1738038910375!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <!-- <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0637507656674!2d-122.39901318468173!3d37.78996797975504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807ded297e89%3A0x9cdf98ba4b4c4c79!2s123%20Mission%20St%2C%20San%20Francisco%2C%20CA%2094105!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe> -->
+
+              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.470740143454!2d121.0857045757409!3d14.57223167776927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7dd0877d283%3A0xe2a90d3f467bf2a2!2s25%20M.%20Suarez%20Avenue%2C%20Pasig%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1733286370603!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+      <p>&copy; 2023 StyleHub. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

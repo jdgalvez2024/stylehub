@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Men's Clothing - StyleHub</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding-top: 70px;
+      }
+      .card-img-top {
+        height: 300px;
+        object-fit: cover;
+      }
+      .card {
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      /* Navbar styles */
+      .navbar {
+        transition: all 0.3s ease;
+        animation: fadeInDown 0.5s ease;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .navbar-nav .nav-link {
+        position: relative;
+        padding: 0.5rem 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background-color: #007bff;
+        transition: all 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover::after {
+        width: 100%;
+        left: 0;
+      }
+
+      .navbar-nav .nav-link.active::after {
+        width: 100%;
+        left: 0;
+      }
+
+      .dropdown-menu {
+        border: none;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+
+      .dropdown-item {
+        transition: background-color 0.3s ease;
+      }
+
+      .dropdown-item:hover {
+        background-color: #f8f9fa;
+      }
+
+      /* Adjust body padding for fixed navbar */
+      body {
+        padding-top: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="/images/logo.png"
+            alt="StyleHub Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-top me-2"
+          />
+          StyleHub
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Products
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="mens-clothing.html"
+                    >Men's Clothing</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="womens-clothing.html"
+                    >Women's Clothing</a
+                  >
+                </li>
+                <!-- <li>
+                  <a class="dropdown-item" href="accessories.html"
+                    >Accessories</a
+                  >
+                </li> -->
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <h1 class="text-center mb-5">Men's Clothing</h1>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Item 1 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/21.jpg"
+              class="card-img-top"
+              alt="Classic White Shirt"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Classic White Shirt</h5>
+              <p class="card-text">
+                A timeless white button-up shirt perfect for any occasion.
+              </p>
+              <p class="card-text"><strong>Price: $49.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted">Available sizes: S, M, L, XL</small>
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/22.jpg"
+              class="card-img-top"
+              alt="Navy Blue Blazer"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Navy Blue Blazer</h5>
+              <p class="card-text">
+                A sophisticated navy blazer for a sharp, professional look.
+              </p>
+              <p class="card-text"><strong>Price: $129.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted"
+                  >Available sizes: 38, 40, 42, 44</small
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/23.png"
+              class="card-img-top"
+              alt="Slim Fit Jeans"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Slim Fit Jeans</h5>
+              <p class="card-text">
+                Comfortable and stylish slim fit jeans in dark wash.
+              </p>
+              <p class="card-text"><strong>Price: $69.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted"
+                  >Available sizes: 30, 32, 34, 36</small
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/24.webp"
+              class="card-img-top"
+              alt="Casual Polo Shirt"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Casual Polo Shirt</h5>
+              <p class="card-text">
+                A comfortable polo shirt for a relaxed yet put-together look.
+              </p>
+              <p class="card-text"><strong>Price: $34.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted">Available sizes: S, M, L, XL</small>
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/25.webp"
+              class="card-img-top"
+              alt="Leather Jacket"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Leather Jacket</h5>
+              <p class="card-text">
+                A classic black leather jacket to add edge to any outfit.
+              </p>
+              <p class="card-text"><strong>Price: $199.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted">Available sizes: S, M, L, XL</small>
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/26.webp"
+              class="card-img-top"
+              alt="Chino Pants"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Chino Pants</h5>
+              <p class="card-text">
+                Versatile chino pants suitable for both casual and semi-formal
+                occasions.
+              </p>
+              <p class="card-text"><strong>Price: $59.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted"
+                  >Available sizes: 30, 32, 34, 36</small
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/27.jpg"
+              class="card-img-top"
+              alt="V-neck Sweater"
+            />
+            <div class="card-body">
+              <h5 class="card-title">V-neck Sweater</h5>
+              <p class="card-text">
+                A soft, comfortable v-neck sweater perfect for layering.
+              </p>
+              <p class="card-text"><strong>Price: $54.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted">Available sizes: S, M, L, XL</small>
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/28.webp"
+              class="card-img-top"
+              alt="Denim Jacket"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Denim Jacket</h5>
+              <p class="card-text">
+                A classic denim jacket to complete your casual looks.
+              </p>
+              <p class="card-text"><strong>Price: $79.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted">Available sizes: S, M, L, XL</small>
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/29.png"
+              class="card-img-top"
+              alt="Cargo Shorts"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Cargo Shorts</h5>
+              <p class="card-text">
+                Comfortable cargo shorts with multiple pockets for practicality.
+              </p>
+              <p class="card-text"><strong>Price: $39.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted"
+                  >Available sizes: 30, 32, 34, 36</small
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 10 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/30.jpg"
+              class="card-img-top"
+              alt="Dress Shoes"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Dress Shoes</h5>
+              <p class="card-text">
+                Elegant black leather dress shoes for formal occasions.
+              </p>
+              <p class="card-text"><strong>Price: $89.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted"
+                  >Available sizes: 8, 9, 10, 11, 12</small
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- Item 11 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/31.jpg"
+              class="card-img-top"
+              alt="Hooded Sweatshirt"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Hooded Sweatshirt</h5>
+              <p class="card-text">
+                A comfortable and warm hooded sweatshirt for casual wear.
+              </p>
+              <p class="card-text"><strong>Price: $44.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted">Available sizes: S, M, L, XL</small>
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 12 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/32.webp"
+              class="card-img-top"
+              alt="Tailored Suit"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Tailored Suit</h5>
+              <p class="card-text">
+                A sleek, modern tailored suit for formal occasions and business
+                wear.
+              </p>
+              <p class="card-text"><strong>Price: $299.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted"
+                  >Available sizes: 38, 40, 42, 44</small
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <p>&copy; 2023 StyleHub. All rights reserved.</p>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

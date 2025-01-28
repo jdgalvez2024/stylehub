@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StyleHub - Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .hero-section {
+        background-image: url("/images/1.webp");
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .product-card img {
+        height: 200px;
+        object-fit: cover;
+      }
+      /* Navbar styles */
+      .navbar {
+        transition: all 0.3s ease;
+        animation: fadeInDown 0.5s ease;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .navbar-nav .nav-link {
+        position: relative;
+        padding: 0.5rem 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background-color: #007bff;
+        transition: all 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover::after {
+        width: 100%;
+        left: 0;
+      }
+
+      .navbar-nav .nav-link.active::after {
+        width: 100%;
+        left: 0;
+      }
+
+      .dropdown-menu {
+        border: none;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+
+      .dropdown-item {
+        transition: background-color 0.3s ease;
+      }
+
+      .dropdown-item:hover {
+        background-color: #f8f9fa;
+      }
+
+      /* Adjust body padding for fixed navbar */
+      body {
+        padding-top: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="/images/logo.png"
+            alt="StyleHub Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-top me-2"
+          />
+          StyleHub
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Products
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="mens-clothing.html"
+                    >Men's Clothing</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="womens-clothing.html"
+                    >Women's Clothing</a
+                  >
+                </li>
+                <!-- <li>
+                  <a class="dropdown-item" href="accessories.html"
+                    >Accessories</a
+                  >
+                </li> -->
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero-section">
+      <div class="text-center">
+        <h1 class="display-4">Welcome to StyleHub</h1>
+        <p class="lead">Discover the latest trends in fashion</p>
+        <a href="#featured-products" class="btn btn-light btn-lg">Shop Now</a>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Featured Products</h2>
+      <div class="row" id="featured-products">
+        <div class="col-md-4 mb-4">
+          <div class="card product-card">
+            <img
+              src="/images/2.jpg"
+              class="card-img-top"
+              alt="Product 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Stylish T-Shirt</h5>
+              <p class="card-text">
+                Comfortable and trendy t-shirt for everyday wear.
+              </p>
+              <a href="#" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card product-card">
+            <img
+              src="/images/5.png"
+              class="card-img-top"
+              alt="Product 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Designer Jeans</h5>
+              <p class="card-text">
+                High-quality denim jeans for a perfect fit.
+              </p>
+              <a href="#" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card product-card">
+            <img
+              src="/images/6.jpg"
+              class="card-img-top"
+              alt="Product 3"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Elegant Dress</h5>
+              <p class="card-text">Beautiful dress for special occasions.</p>
+              <a href="#" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Why Choose StyleHub?</h2>
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <img
+            src="/images/10.jpg"
+            width="40%"
+            class="rounded-circle mb-3"
+            alt="Quality"
+          />
+          <h4>High-Quality Materials</h4>
+          <p>We use only the finest fabrics and materials in our clothing.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img
+            src="/images/11.jpg"
+            width="41%"
+            class="rounded-circle mb-3"
+            alt="Trendy"
+          />
+          <h4>Latest Fashion Trends</h4>
+          <p>Stay up-to-date with the newest styles and designs.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img
+            src="/images/12.png"
+            width="40%"
+            class="rounded-circle mb-3"
+            alt="Sustainable"
+          />
+          <h4>Sustainable Practices</h4>
+          <p>We're committed to eco-friendly and ethical manufacturing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light py-5 mt-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Subscribe to Our Newsletter</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form>
+              <div class="input-group mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter your email"
+                  aria-label="Enter your email"
+                  aria-describedby="button-addon2"
+                  required
+                />
+                <button
+                  class="btn btn-primary"
+                  type="submit"
+                  id="button-addon2"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+      <p>&copy; 2023 StyleHub. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StyleHub - About Us</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .hero-section {
+        background-image: url("/images/3.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .timeline {
+        position: relative;
+        padding-left: 30px;
+        margin-left: 10px;
+        border-left: 2px solid #007bff;
+      }
+      .timeline-item {
+        position: relative;
+        margin-bottom: 30px;
+      }
+      .timeline-item:before {
+        content: "";
+        position: absolute;
+        left: -41px;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        background-color: #007bff;
+        border-radius: 50%;
+      }
+      .navbar-nav .nav-link {
+        position: relative;
+        padding: 0.5rem 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background-color: #007bff;
+        transition: all 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover::after {
+        width: 100%;
+        left: 0;
+      }
+
+      .navbar-nav .nav-link.active::after {
+        width: 100%;
+        left: 0;
+      }
+
+      .dropdown-menu {
+        border: none;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+
+      .dropdown-item {
+        transition: background-color 0.3s ease;
+      }
+
+      .dropdown-item:hover {
+        background-color: #f8f9fa;
+      }
+
+      /* Adjust body padding for fixed navbar */
+      body {
+        padding-top: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="/images/logo.png"
+            alt="StyleHub Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-top me-2"
+          />
+          StyleHub
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Products
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="mens-clothing.html"
+                    >Men's Clothing</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="womens-clothing.html"
+                    >Women's Clothing</a
+                  >
+                </li>
+                <!-- <li>
+                    <a class="dropdown-item" href="accessories.html"
+                      >Accessories</a
+                    >
+                  </li> -->
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero-section">
+      <div class="text-center">
+        <h1 class="display-4">About StyleHub</h1>
+        <p class="lead">Discover our story and passion for fashion</p>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Our Story</h2>
+          <p>
+            StyleHub was born out of a passion for fashion and a desire to make
+            high-quality, trendy clothing accessible to everyone. Founded in
+            2010 by siblings Sarah and Michael Thompson, our journey began in a
+            small garage in San Francisco.
+          </p>
+          <p>
+            What started as a hobby creating unique, handcrafted pieces for
+            friends and family quickly grew into a thriving online business.
+            Today, StyleHub is proud to be a leading name in sustainable and
+            stylish fashion, with a global customer base and a commitment to
+            ethical manufacturing practices.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="/images/4.webp"
+            class="img-fluid rounded"
+            alt="StyleHub founders"
+          />
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h2 class="text-center mb-4">Our Journey</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h4>2010: The Beginning</h4>
+              <p>
+                Sarah and Michael Thompson start creating custom clothing in
+                their garage.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <h4>2012: Online Launch</h4>
+              <p>
+                StyleHub.com is launched, offering a curated collection of
+                handmade clothing.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <h4>2015: Expanding Horizons</h4>
+              <p>
+                StyleHub opens its first physical store in San Francisco and
+                expands its product line.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <h4>2018: Sustainability Focus</h4>
+              <p>
+                We commit to using sustainable materials and ethical
+                manufacturing practices.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <h4>2023: Global Presence</h4>
+              <p>
+                StyleHub now ships to over 50 countries and has a team of 100+
+                passionate employees.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <img
+            src="/images/8.webp"
+            class="img-fluid rounded mb-3"
+            alt="Our mission"
+          />
+          <h3>Our Mission</h3>
+          <p>
+            To provide stylish, high-quality clothing that empowers individuals
+            to express their unique personalities while promoting sustainable
+            fashion practices.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="/images/7.webp"
+            class="img-fluid rounded mb-3"
+            alt="Our values"
+          />
+          <h3>Our Values</h3>
+          <ul>
+            <li>Quality craftsmanship</li>
+            <li>Sustainable practices</li>
+            <li>Customer satisfaction</li>
+            <li>Innovation in design</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="/images/9.jpg"
+            class="img-fluid rounded mb-3"
+            alt="Our team"
+          />
+          <h3>Our Team</h3>
+          <p>
+            We're a diverse group of fashion enthusiasts, designers, and
+            technology experts working together to bring you the best in style
+            and comfort.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light py-5 mt-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Join the StyleHub Family</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+            <p>
+              Be part of our journey and stay updated with the latest trends and
+              exclusive offers.
+            </p>
+            <a href="contact.html" class="btn btn-primary btn-lg">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+      <p>&copy; 2023 StyleHub. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

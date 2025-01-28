@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Women's Clothing - Your Store Name</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+      body {
+        padding-top: 70px;
+      }
+      .card-img-top {
+        height: 300px;
+        object-fit: cover;
+      }
+      .card {
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      /* Navbar styles */
+      .navbar {
+        transition: all 0.3s ease;
+        animation: fadeInDown 0.5s ease;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .navbar-nav .nav-link {
+        position: relative;
+        padding: 0.5rem 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background-color: #007bff;
+        transition: all 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover::after {
+        width: 100%;
+        left: 0;
+      }
+
+      .navbar-nav .nav-link.active::after {
+        width: 100%;
+        left: 0;
+      }
+
+      .dropdown-menu {
+        border: none;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+
+      .dropdown-item {
+        transition: background-color 0.3s ease;
+      }
+
+      .dropdown-item:hover {
+        background-color: #f8f9fa;
+      }
+
+      /* Adjust body padding for fixed navbar */
+      body {
+        padding-top: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="/images/logo.png"
+            alt="StyleHub Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-top me-2"
+          />
+          StyleHub
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Products
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="mens-clothing.html"
+                    >Men's Clothing</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="womens-clothing.html"
+                    >Women's Clothing</a
+                  >
+                </li>
+                <!-- <li>
+                  <a class="dropdown-item" href="accessories.html"
+                    >Accessories</a
+                  >
+                </li> -->
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container mt-5">
+      <h1 class="text-center mb-5">Women's Clothing</h1>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Item 1 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/40.jpg"
+              class="card-img-top"
+              alt="Floral Summer Dress"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Floral Summer Dress</h5>
+              <p class="card-text">
+                A light and breezy floral print dress perfect for summer days.
+              </p>
+              <p class="card-text"><strong>Price: $49.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted"
+                  >Available sizes: XS, S, M, L, XL</small
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/41.jpg"
+              class="card-img-top"
+              alt="High-Waisted Jeans"
+            />
+            <div class="card-body">
+              <h5 class="card-title">High-Waisted Jeans</h5>
+              <p class="card-text">
+                Comfortable and stylish high-waisted jeans for a classic look.
+              </p>
+              <p class="card-text"><strong>Price: $59.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted">Available sizes: 24-34</small>
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/42.webp"
+              class="card-img-top"
+              alt="Blouse"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Silk Blouse</h5>
+              <p class="card-text">
+                An elegant silk blouse suitable for both office and casual wear.
+              </p>
+              <p class="card-text"><strong>Price: $79.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted"
+                  >Available sizes: XS, S, M, L, XL</small
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/43.jpg"
+              class="card-img-top"
+              alt="Maxi Skirt"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Flowy Maxi Skirt</h5>
+              <p class="card-text">
+                A long, flowy maxi skirt perfect for a bohemian summer look.
+              </p>
+              <p class="card-text"><strong>Price: $54.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted"
+                  >Available sizes: XS, S, M, L, XL</small
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/44.jpg"
+              class="card-img-top"
+              alt="Cardigan"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Cozy Knit Cardigan</h5>
+              <p class="card-text">
+                A soft, warm cardigan perfect for layering in cooler weather.
+              </p>
+              <p class="card-text"><strong>Price: $69.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted">Available sizes: S, M, L, XL</small>
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/45.webp"
+              class="card-img-top"
+              alt="Jumpsuit"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Sleek Jumpsuit</h5>
+              <p class="card-text">
+                A versatile jumpsuit that can be dressed up or down for any
+                occasion.
+              </p>
+              <p class="card-text"><strong>Price: $89.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted"
+                  >Available sizes: XS, S, M, L, XL</small
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/46.jpg"
+              class="card-img-top"
+              alt="Blazer"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Tailored Blazer</h5>
+              <p class="card-text">
+                A sharp, tailored blazer to elevate any professional or casual
+                outfit.
+              </p>
+              <p class="card-text"><strong>Price: $99.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted"
+                  >Available sizes: XS, S, M, L, XL</small
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/47.avif"
+              class="card-img-top"
+              alt="Leggings"
+            />
+            <div class="card-body">
+              <h5 class="card-title">High-Performance Leggings</h5>
+              <p class="card-text">
+                Comfortable, stretchy leggings perfect for workouts or casual
+                wear.
+              </p>
+              <p class="card-text"><strong>Price: $39.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted"
+                  >Available sizes: XS, S, M, L, XL</small
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/48.jpg"
+              class="card-img-top"
+              alt="Sweater"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Chunky Knit Sweater</h5>
+              <p class="card-text">
+                A cozy, oversized sweater perfect for chilly days.
+              </p>
+              <p class="card-text"><strong>Price: $74.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted">Available sizes: S, M, L, XL</small>
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 10 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/49.jpg"
+              class="card-img-top"
+              alt="Midi Dress"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Wrap Midi Dress</h5>
+              <p class="card-text">
+                An elegant wrap-style midi dress suitable for various occasions.
+              </p>
+              <p class="card-text"><strong>Price: $69.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted"
+                  >Available sizes: XS, S, M, L, XL</small
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 11 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/50.jpg"
+              class="card-img-top"
+              alt="Crop Top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Trendy Crop Top</h5>
+              <p class="card-text">
+                A stylish crop top perfect for pairing with high-waisted
+                bottoms.
+              </p>
+              <p class="card-text"><strong>Price: $29.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted">Available sizes: XS, S, M, L</small>
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 12 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/images/51.jpg"
+              class="card-img-top"
+              alt="Wide-Leg Pants"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Flowing Wide-Leg Pants</h5>
+              <p class="card-text">
+                Comfortable and chic wide-leg pants for a sophisticated look.
+              </p>
+              <p class="card-text"><strong>Price: $64.99</strong></p>
+              <p class="card-text">
+                <small class="text-muted"
+                  >Available sizes: XS, S, M, L, XL</small
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <p>&copy; 2023 StyleHub. All rights reserved.</p>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
